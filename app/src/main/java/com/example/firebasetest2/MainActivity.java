@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         new BasicWriteRead();
         BasicWriteRead.basicWriteRead();
 
-        new AdvanceWriteRead();
+        //new AdvanceWriteRead();
         //AdvanceWriteRead.advanceWriteRead();
 
         new WriteFamilies();
@@ -35,5 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
         new ReadFamilies();
         ReadFamilies.readFamilies();
+
+        new SeparateWriting();
+        SeparateWriting.separateWriting();
+
+        new SeparateReading();
+
+        SeparateReading.separateReading();
     }
 }
