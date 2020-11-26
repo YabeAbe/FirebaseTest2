@@ -161,13 +161,9 @@ public class BasicWriteRead {
                 Log.d(TAG, "person_C phone: " + person_C.phone);
 
                 // Read personsArray node by iteration
-                int personsArrayLength = (int) dataSnapshot.child("personsArray").getChildrenCount();
-                Log.d(TAG, "pseronsArray childrencount: " + personsArrayLength);
-                for(int i = 0; i < personsArrayLength; i++) {
-                    String personLabel = "person_" + i;
-                    Person person_i = dataSnapshot.child("personsArray").child(String.valueOf(i)).
-                            getValue(Person.class);
-                    Log.d(TAG, personLabel + " name: " + person_i.name);
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                    String personName = (String) dataSnapshot1.child("name").getValue();
+                    Log.d(TAG, "name is " + personName);
                 }
             }
             @Override
@@ -176,6 +172,7 @@ public class BasicWriteRead {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+
         // [END read_message]
     }
 }

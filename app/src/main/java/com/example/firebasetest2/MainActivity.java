@@ -16,6 +16,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.firebasetest2.ArrayTest.arrayTest;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "MainActivity";
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+/*
         new BasicWriteRead();
         BasicWriteRead.basicWriteRead();
 
@@ -42,5 +45,16 @@ public class MainActivity extends AppCompatActivity {
         new SeparateReading();
 
         SeparateReading.separateReading();
+
+
+        new ArrayTest();
+        ArrayTest.arrayTest();
+*/
+        new PushTest();
+        PushTest.pushTest();
+
+        new PushOrderTest();
+        PushOrderTest.pushOrderTest();
+
     }
 }
